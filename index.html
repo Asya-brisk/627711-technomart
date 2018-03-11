@@ -10,7 +10,10 @@
         <a class="main-header-logo">
           Техномарт
         </a>
-        <!-- Здесь будет форма -->
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input type="search" name="search" id="search" placeholder="Поиск">
+        </form>
         <a class="bookmark-button" href="#">Закладки</a>
         <a class="basket-button" href="#">Корзина</a>
         <a class="order-button" href="#">Оформить заказ</a>
@@ -92,8 +95,6 @@
           <li class="catalog-item">
             <a href="catalog-item.html" >
               <img src="img/item1.jpg" class="catalog-item-image" alt="Перфоратор BOSCH BFG 9000">
-            </a>
-            <a href="catalog-item.html">
               <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-category">BFG 9000</span>
@@ -107,8 +108,6 @@
           <li class="catalog-item">
             <a href="catalog-item.html">
               <img src="img/item2.jpg" class="catalog-item-image" alt="Перфоратор BOSCH BFG 3000">
-            </a>
-            <a href="catalog-item.html">
               <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-category">BFG 3000</span>
@@ -122,8 +121,6 @@
           <li class="catalog-item">
             <a href="catalog-item.html">
               <img src="img/item3.jpg" class="catalog-item-image" alt="Перфоратор BOSCH BFG 6000">
-            </a>
-            <a href="catalog-item.html">
               <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-category">BFG 6000</span>
@@ -137,8 +134,6 @@
           <li class="catalog-item new-item">
             <a href="catalog-item.html">
               <img src="img/item2.jpg" class="catalog-item-image" alt="Перфоратор BOSCH BFG 2000">
-            </a>
-            <a href="catalog-item.html">
               <h3>
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-category">BFG 2000</span>
@@ -238,9 +233,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br>
         заехав в наш офис:</p>
-
-        <a href="map.html" class="map"><img src="img/small-map.png" alt="Карта"></a>
-
+        <a href="map.html" class="map"><img src="img/small-map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
         <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
     </main>
@@ -285,5 +278,32 @@
         </p>
       </section>
     </footer>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+        <img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+
+    <section class="modal modal-letter">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="letter-item half-width">
+          <label for="letter-name">Ваше имя:</label>
+          <input id="letter-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p class="letter-item half-width">
+          <label for="letter-email">Ваш e-mail:</label>
+          <input id="letter-email" type="email" name="email" placeholder="Для отправки ответа">
+        </p>
+        <p class="letter-item">
+          <label for="letter-text">Текст письма:</label>
+          <textarea name="text" id="letter-text" rows="5" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+        <button class="modal-close" type="button">Закрыть</button>
+      </form>
+    </section>
+
   </body>
 </html>
