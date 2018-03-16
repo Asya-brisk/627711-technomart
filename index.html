@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="top-menu">
-        <a class="main-header-logo">
+        <a class="button main-logo">
           Техномарт
         </a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="search">Поиск</label>
-          <input type="search" name="search" id="search" placeholder="Поиск">
+          <input type="search" name="search" id="search" placeholder="Поиск:">
         </form>
-        <a class="bookmark-button" href="#">Закладки</a>
-        <a class="basket-button" href="#">Корзина</a>
-        <a class="order-button" href="#">Оформить заказ</a>
+        <a class="top-menu-button bookmark-button" href="#">Закладки</a>
+        <a class="top-menu-button basket-button" href="#">Корзина</a>
+        <a class="top-menu-button order-button" href="#">Оформить заказ</a>
       </div>
       <div class="header-middle">
         <p class="shop">
@@ -218,28 +221,32 @@
           </div>
         </div>
       </section>
-      <section class="information">
-        <h2>Компания "Техномарт"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+      <div class="info-columns">
+        <section class="information">
+          <h2>Компания "Техномарт"</h2>
+          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
         Техномарт работает со многими транспортными компаниями: </p>
-        <ul class="transport">
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-      </section>
-      <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами,<br>
-        заехав в наш офис:</p>
-        <a href="map.html" class="map"><img src="img/small-map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
-        <a class="button" href="#">Заблудились? Напишите нам!</a>
-      </section>
+          <ul class="transport">
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
+        <a class="button" href="#">Подробнее о компании</a>
+        </section>
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами,<br>
+          заехав в наш офис:</p>
+          <a href="map.html" class="map"><img src="img/small-map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
+          <p><a class="button" href="#">Заблудились? Напишите нам!</a></p>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
-      <section class="major-footer">
-        <a class="main-footer-logo">
+      <section class="user-footer">
+        <h2 class="visually-hidden">Для пользователя</h2>
+        <a class="button main-logo">
           Техномарт
         </a>
         <p class="footer-contacts">
@@ -260,7 +267,8 @@
           <li><a href="special-offer.html">Спецпредложения</a></li>
         </ul>
       </section>
-      <section class="minor-footer">
+      <section class="feedback-footer">
+        <h2 class="visually-hidden">Обратная связь</h2>
         <p class="copyright">© 2010–2017 Компания «Техномарт»<br>
         Все права защищены</p>
         <div class="footer-social">
@@ -279,7 +287,7 @@
       </section>
     </footer>
 
-    <section class="modal modal-map">
+    <section class="modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
         <img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
       <button class="modal-close" type="button">Закрыть</button>
@@ -300,10 +308,11 @@
           <label for="letter-text">Текст письма:</label>
           <textarea name="text" id="letter-text" rows="5" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button" type="submit">Отправить</button>
-        <button class="modal-close" type="button">Закрыть</button>
+        <div class="modal-bottom">
+          <button class="button" type="submit">Отправить</button>
+          <button class="modal-close" type="button">Закрыть</button>
+        </div>
       </form>
     </section>
-
   </body>
 </html>

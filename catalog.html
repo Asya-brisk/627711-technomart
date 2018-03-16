@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="top-menu">
-        <a class="main-header-logo">
+        <a class="button main-logo">
           Техномарт
         </a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="search">Поиск</label>
           <input type="search" name="search" id="search" placeholder="Поиск">
         </form>
-        <a class="bookmark-button" href="#">Закладки</a>
-        <a class="basket-button" href="#">Корзина</a>
-        <a class="order-button" href="#">Оформить заказ</a>
+        <a class="top-menu-button bookmark-button" href="#">Закладки</a>
+        <a class="top-menu-button basket-button" href="#">Корзина</a>
+        <a class="top-menu-button order-button" href="#">Оформить заказ</a>
       </div>
       <div class="header-middle">
         <p class="shop">
@@ -61,12 +64,12 @@
           <fieldset>
             <legend>Цена:</legend>
             <label for="price-range" class="visually-hidden">Диапазон цены</label>
-            <input type="range" name="price-range" id="price-range" min="0" max="40000" step="5000">
+            <input class="range-style" type="range" name="price-range" id="price-range" min="0" max="40000" step="5000">
             <p>
               <label for="min-price" class="visually-hidden">Минимальная цена</label>
-              <input type="text" name="min-price" id="min-price"> -
+              <input type="text" name="min-price" id="min-price" class="min-max-price"> -
               <label for="max-price" class="visually-hidden">Максимальная цена</label>
-              <input type="text" name="max-price" id="max-price">
+              <input type="text" name="max-price" id="max-price" class="min-max-price">
             </p>
           </fieldset>
           <fieldset>
@@ -102,17 +105,17 @@
                 <label for="filter-accumulators">АККУМУЛЯТОРНЫЕ</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="supply-type" value="line-supply" id="filter-line-supply">
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="supply-type" value="line-supply" id="filter-line-supply" disabled>
                 <label for="filter-line-supply">СЕТЕВЫЕ</label>
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-button button">Показать</button>
+          <button type="submit" class="filter-button">Показать</button>
         </form>
       </section>
       <section class="sorting">
         <h3 class="filter">Сортировка:</h3>
-        <a href="#">По цене</a>
+        <a href="catalog.html">По цене</a>
         <a href="#">По типу</a>
         <a href="#">По функционалу</a>
         <a class="visually-hidden up" href="#">По возрастанию</a>
@@ -148,7 +151,7 @@
             <a class="item-button" href="#">25500 Р.</a>
           </li>
           <li class="catalog-item new-item">
-            <a class="button-purchase" href="#">Купить</a>
+            <a class="button button-purchase" href="#">Купить</a>
             <a class="button-item-bookmark" href="#">В закладки</a>
             <a href="catalog-item.html">
               <h3>
@@ -250,8 +253,9 @@
       </section>
     </main>
     <footer class="main-footer">
-      <section class="major-footer">
-        <a class="main-footer-logo">
+      <section class="user-footer">
+        <h2 class="visually-hidden">Для пользователя</h2>
+        <a class="button main-logo">
           Техномарт
         </a>
         <p class="footer-contacts">
@@ -272,7 +276,8 @@
           <li><a href="special-offer.html">Спецпредложения</a></li>
         </ul>
       </section>
-      <section class="minor-footer">
+      <section class="feedback-footer">
+        <h2 class="visually-hidden">Обратная связь</h2>
         <p class="copyright">© 2010–2017 Компания «Техномарт»<br>
         Все права защищены</p>
         <div class="footer-social">
@@ -293,9 +298,11 @@
 
     <div class="modal modal-cart">
       <p>Товар добавлен в корзину!</p>
-      <a class="button" href="#">Оформить заказ</a>
-      <a class="button button-modal-cart" href="#">Продолжить покупки</a>
+      <div class="modal-bottom">
+        <a class="button" href="#">Оформить заказ</a>
+        <a class="button button-modal-cart" href="#">Продолжить покупки</a>
       <button class="modal-close" type="button">Закрыть</button>
+    </div>
     </div>
   </body>
 </html>
