@@ -420,6 +420,7 @@ ul.transport {
 h3.filter {
   line-height: 18px;
   text-transform: uppercase;
+  font-weight: normal;
 
   background-color: #f7f3ec;
 }
