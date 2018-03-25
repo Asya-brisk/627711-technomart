@@ -183,6 +183,19 @@ input[type="radio"].visually-hidden {
   background-color: #63a63e;
 }
 
+.bookmark-button:hover,
+.bookmark-button:focus,
+.basket-button:hover,
+.basket-button:focus {
+  background-color: #212a3a;
+}
+
+.bookmark-button:active,
+.basket-button:active {
+  background-color: #161d29;
+  opacity: 0.6;
+}
+
 .order-button:hover,
 .order-button:focus {
   background-color: #5fbb2d;
@@ -1024,16 +1037,17 @@ ul.transport {
 
 .sorting {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   padding: 0px 18px;
-  padding-right: 105px;
+  padding-right: 17px;
 
   background-color: #f7f3ec;
   border-radius: 2px;
 }
 
-.sorting a {
+
+a.sorting-ref {
   line-height: 18px;
   color: #000000;
   opacity: 0.3;
@@ -1045,27 +1059,51 @@ ul.transport {
 
 .sorting h3,
 .sorting a {
-  margin: 10px 0px;
+  margin-top: 7px;
+  margin-bottom: 8px;
 }
 
-.sorting a:first-of-type {
-  color: #ee3643;
-  opacity: 1;
-  margin-left: 70px;
-
-  border: none;
+.sorting h3 {
+  margin-right: 97px;
 }
 
-.sorting a:hover,
-.sorting a:focus {
+.sorting-ref {
+  margin-right: 25px;
+  margin-left: 43px;
+}
+
+a.sorting-ref:hover,
+a.sorting-ref:focus {
  opacity: 1;
+
+ border-bottom: 1px solid #ee3643;
 }
 
-.sorting a:active {
+a.sorting-ref:active {
   color: #ee3643;
   opacity: 1;
 
   border: none;
+}
+
+a.up-down {
+  margin-left: 21px;
+}
+
+a.up-down path {
+  fill: #000000;
+  opacity: 0.3;
+}
+
+a.up-down:hover path,
+a.up-down:focus path {
+  fill: #000000;
+  opacity: 1;
+}
+
+a.up-down:active path {
+  fill: #ee3643;
+  opacity: 1;
 }
 
 .catalog {
