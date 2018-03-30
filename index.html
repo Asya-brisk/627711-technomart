@@ -317,33 +317,32 @@
       </section>
     </footer>
 
-    <section class="modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      <button class="modal-close" type="button">Закрыть</button>
-    </section>
-
-    <section class="modal modal-letter">
+    <section class="modal modal-card modal-letter">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="letter-item half-width">
+        <p class="half-width">
           <label for="letter-name">Ваше имя:</label>
           <input id="letter-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
         </p>
-        <p class="letter-item half-width">
+        <p class="half-width">
           <label for="letter-email">Ваш e-mail:</label>
           <input id="letter-email" type="email" name="email" placeholder="Для отправки ответа">
         </p>
-        <p class="letter-item">
+        <p>
           <label for="letter-text">Текст письма:</label>
           <textarea name="text" id="letter-text" rows="5" placeholder="В свободной форме"></textarea>
         </p>
-        <div class="modal-bottom">
           <button class="button" type="submit">Отправить</button>
           <button class="modal-close" type="button">Закрыть</button>
-        </div>
       </form>
     </section>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p><img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+
   </body>
 </html>
 
