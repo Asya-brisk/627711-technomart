@@ -1216,7 +1216,14 @@ a.item-button {
   cursor: pointer;
 }
 
-.service-item:hover,
+.service-item-current {
+  color: #32425c;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+
+
 .service-item :focus {
   background-color: #293449;
   box-shadow: none;
@@ -1726,7 +1733,6 @@ ul.transport {
   border-radius: 2px;
 }
 
-
 .sorting-ref {
   line-height: 18px;
   color: #000000;
@@ -1737,13 +1743,12 @@ ul.transport {
   border-bottom: 1px dotted #ee3643;
 }
 
-a.current {
+.sorting-ref.current {
   color: #ee3643;
   opacity: 1;
 
- border-bottom: 1px solid transparent;
+ border-bottom: 1px solid #f7f3ec;
 }
-
 
 .sorting h3,
 .sorting a {
@@ -1767,15 +1772,20 @@ a.sorting-ref:focus:not(.current) {
  border-bottom: 1px solid #ee3643;
 }
 
-a.sorting-ref:active {
+a.sorting-ref:active:not(.current) {
   color: #ee3643;
   opacity: 1;
 
- border-bottom: 1px solid transparent;
+ border-bottom: 1px solid #f7f3ec;
 }
 
 a.up-down {
   margin-left: 21px;
+}
+
+.up-down-current path {
+  fill: #ee3643;
+  opacity: 1;
 }
 
 a.up-down:not(.up-down-current) path {
@@ -1789,15 +1799,11 @@ a.up-down:focus:not(.up-down-current) path {
   opacity: 1;
 }
 
-a.up-down:active path {
+a.up-down:active:not(.up-down-current) path {
   fill: #ee3643;
   opacity: 1;
 }
 
-.up-down-current path {
-  fill: #ee3643;
-  opacity: 1;
-}
 
 /*Переключатель страниц в каталоге*/
 
@@ -1857,7 +1863,7 @@ a.up-down:active path {
   color: #ffffff;
 
   background-color: #ee3643;
-  border: none;
+  border: 1px solid #ee3643;
 }
 
 /*ФУТЕР*/
@@ -2047,12 +2053,63 @@ ul.footer-social {
 
 /*Модальные окна*/
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
+  display: none;
 
   width: 620px;
 
-  z-index: 100;
+  z-index: 20;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .modal p {
@@ -2063,28 +2120,28 @@ ul.footer-social {
 .modal-card {
   left: 50%;
   bottom: 15%;
-  margin-left: -230px;
+  margin-left: -260px;
   background-color: #ffffff;
-  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75),
+  box-shadow: 0px 20px 40px 0px rgba(41, 52, 43, 0.75),
+              inset 0 -3px 0 -7px rgba(0, 0, 0, 0.35),
               inset 0 -112px 0 #f4f4f4;
   border-top: 7px solid #ee3643;
 }
 
 .modal-letter {
-  display: none;
-
   padding-top: 45px;
 }
 
 .modal-close {
   position: absolute;
   top: 9px;
-  right: 0px;
+  right: 8px;
 
   width: 26px;
   height: 26px;
 
   font-size: 0;
+  z-index: 20;
 
   background-color: transparent;
   border: 0;
@@ -2098,7 +2155,7 @@ ul.footer-social {
 
   position: absolute;
   top: 9px;
-  right: 8px;
+  left: 0;
 
   width: 26px;
   height: 4px;
@@ -2195,7 +2252,6 @@ ul.footer-social {
   top: 50%;
   left: 50%;
 
-  display: none;
   width: 940px;
   height: 446px;
   margin-top: -280px;
@@ -2206,13 +2262,25 @@ ul.footer-social {
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .modal-cart {
   left: 50%;
   bottom: 15%;
-  margin-left: -230px;
+  margin-left: -280px;
 
   background-image: url("../img/form-1.svg");
   background-repeat: no-repeat;
@@ -2220,9 +2288,7 @@ ul.footer-social {
 }
 
 .modal-cart p {
-  display: none;
-
-  margin: 64px 179px;
+  margin: 65px 179px;
   margin-right: 126px;
   margin-bottom: 104px;
 

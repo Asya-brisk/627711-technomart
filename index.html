@@ -219,7 +219,7 @@
             <input class="visually-hidden" type="radio" id="guarantee" name="service-references">
             <input class="visually-hidden" type="radio" id="credit" name="service-references">
               <div class="services-catalog">
-                <label class="service-item" for="delivery">Доставка</label>
+                <label class="service-item service-item-current" for="delivery">Доставка</label>
                 <label class="service-item" for="guarantee">Гарантия</label>
                 <label class="service-item" for="credit">Кредит</label>
               </div>
@@ -266,8 +266,8 @@
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами,<br>
           заехав в наш офис:</p>
-          <a href="map.html" class="map"><img src="img/small-map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
-          <p><a class="button" href="#">Заблудились? Напишите нам!</a></p>
+          <a class="button-map" href="map.html" ><img src="img/small-map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
+          <p><a class="button write-us" href="#">Заблудились? Напишите нам!</a></p>
         </section>
       </div>
     </main>
@@ -321,16 +321,16 @@
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
         <p class="half-width">
-          <label for="letter-name">Ваше имя:</label>
-          <input id="letter-name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="user" placeholder="Представьтесь, пожалуйста">
         </p>
         <p class="half-width">
           <label for="letter-email">Ваш e-mail:</label>
-          <input id="letter-email" type="email" name="email" placeholder="Для отправки ответа">
+          <input id="letter-email" type="email" name="l-email" placeholder="Для отправки ответа">
         </p>
         <p>
           <label for="letter-text">Текст письма:</label>
-          <textarea name="text" id="letter-text" rows="5" placeholder="В свободной форме"></textarea>
+          <textarea name="l-text" id="letter-text" rows="5" placeholder="В свободной форме"></textarea>
         </p>
           <button class="button" type="submit">Отправить</button>
           <button class="modal-close" type="button">Закрыть</button>
@@ -339,9 +339,12 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBe~ZWt2cD" width="940" height="446" frameborder="0" allowfullscreen></iframe>
         <p><img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>
