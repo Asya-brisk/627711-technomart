@@ -2513,8 +2513,9 @@ ul.footer-social {
 
 .modal-cart {
   left: 50%;
-  bottom: 15%;
-  margin-left: -280px;
+  top: 50%;
+  margin-top: -280px;
+  margin-left: -270px;
 
   background-image: url("../img/form-1.svg");
   background-repeat: no-repeat;
