@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <meta name="format-detection" content="telephone=no">
@@ -56,8 +55,7 @@
     <main class="home-page">
       <div class="container">
         <section class="items">
-          <div class="item item-material">
-            <div class="flag flag-new">Новинка</div>
+          <div class="item item-material new-item">
             <p>Материалы</p>
             <a href="#">на любой вкус</a>
           </div>
@@ -114,14 +112,17 @@
                   <a class="button-item-bookmark" href="#">В закладки</a>
               </div>
               <div class="catalog-item-image">
-                <img src="img/item1.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000"></div>
-                <h3 class="catalog-category">
-                  Перфоратор BOSCH BFG 9000
-                </h3>
+                <img src="img/item1.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000">
+              </div>
+              <h3 class="catalog-category">
+                Перфоратор BOSCH BFG 9000
+              </h3>
               <p class="item-old-price">
                 32500 Р.
               </p>
-              <a class="item-button" href="#">25500 Р.</a>
+              <div class="new-price">
+                <a class="item-button" href="#">25500 Р.</a>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="actions">
@@ -129,14 +130,17 @@
                   <a class="button-item-bookmark" href="#">В закладки</a>
               </div>
               <div class="catalog-item-image">
-                <img src="img/item2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000"></div>
-                <h3 class="catalog-category">
-                  Перфоратор BOSCH BFG 3000
-                </h3>
+                <img src="img/item2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
+              </div>
+              <h3 class="catalog-category">
+                Перфоратор BOSCH BFG 3000
+              </h3>
               <p class="item-old-price">
-                22500 Р.
+              22500 Р.
               </p>
-              <a class="item-button" href="#">15500 Р.</a>
+              <div class="new-price">
+                <a class="item-button" href="#">15500 Р.</a>
+              </div>
             </li>
             <li class="catalog-item">
               <div class="actions">
@@ -144,28 +148,33 @@
                 <a class="button-item-bookmark" href="#">В закладки</a>
               </div>
               <div class="catalog-item-image">
-                <img src="img/item3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000"></div>
-                <h3 class="catalog-category">
-                  Перфоратор BOSCH BFG 6000
-                </h3>
+                <img src="img/item3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
+              </div>
+              <h3 class="catalog-category">
+                Перфоратор BOSCH BFG 6000
+              </h3>
               <p class="item-old-price">
                 30500 Р.
               </p>
-              <a class="item-button" href="#">25500 Р.</a>
+              <div class="new-price">
+                <a class="item-button" href="#">25500 Р.</a>
+              </div>
             </li>
             <li class="catalog-item new-item">
-              <div class="flag flag-new">Новинка</div>
               <div class="actions">
                 <a class="button-purchase" href="#">Купить</a>
                 <a class="button-item-bookmark" href="#">В закладки</a>
               </div>
               <div class="catalog-item-image">
-                <img src="img/item4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000"></div>
-                <h3 class="catalog-category">
-                  Перфоратор BOSCH BFG 2000
-                </h3>
-                <p class="item-old-price"></p>
+                <img src="img/item4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
+              </div>
+              <h3 class="catalog-category">
+                Перфоратор BOSCH BFG 2000
+              </h3>
+              <p class="item-old-price"></p>
+              <div class="new-price">
                 <a class="item-button" href="#">12500 Р.</a>
+              </div>
             </li>
           </ul>
         </section>
@@ -175,36 +184,44 @@
             <a class="button button-brands" href="#">Все производители</a>
           </div>
           <ul class="brands-catalog">
-            <li class="brand"><a href="brand1.html">
+            <li class="brand">
+              <a href="brand1.html">
               <img src="img/bosch.jpg" alt="BOSCH">
               </a>
             </li>
-            <li class="brand"><a href="brand2.html">
+            <li class="brand">
+              <a href="brand2.html">
                 <img src="img/makita.jpg" alt="Makita">
-                </a>
+              </a>
             </li>
-            <li class="brand"><a href="brand3.html">
+            <li class="brand">
+              <a href="brand3.html">
                 <img src="img/dewalt.jpg" alt="DeWALT">
-                </a>
-            </li>
-            <li class="brand"><a href="brand4.html">
-              <img src="img/interskol.jpg" alt="ИНТЕРСКОЛ">
               </a>
             </li>
-            <li class="brand"><a href="brand5.html">
-              <img src="img/hitachi.jpg" alt="HITACHI">
+            <li class="brand">
+              <a href="brand4.html">
+                <img src="img/interskol.jpg" alt="ИНТЕРСКОЛ">
               </a>
             </li>
-            <li class="brand"><a href="brand6.html">
-              <img src="img/lg.jpg" alt="LG">
+            <li class="brand">
+              <a href="brand5.html">
+                <img src="img/hitachi.jpg" alt="HITACHI">
               </a>
             </li>
-            <li class="brand"><a href="brand7.html">
-              <img src="img/aeg.jpg" alt="AEG">
+            <li class="brand">
+              <a href="brand6.html">
+                <img src="img/lg.jpg" alt="LG">
               </a>
             </li>
-            <li class="brand"><a href="brand8.html">
-              <img src="img/metabo.jpg" alt="metabo">
+            <li class="brand">
+              <a href="brand7.html">
+                <img src="img/aeg.jpg" alt="AEG">
+              </a>
+            </li>
+            <li class="brand">
+              <a href="brand8.html">
+                <img src="img/metabo.jpg" alt="metabo">
               </a>
             </li>
           </ul>
@@ -213,14 +230,14 @@
       <section class="services">
         <div class="services-container">
           <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          <p>Хороший интернет-магазин отличается от плохого не только ценами!
            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="services-slider">
             <input class="visually-hidden" type="radio" id="delivery" name="service-references" checked>
             <input class="visually-hidden" type="radio" id="guarantee" name="service-references">
             <input class="visually-hidden" type="radio" id="credit" name="service-references">
               <div class="services-catalog">
-                <label class="service-item service-item-current" for="delivery">Доставка</label>
+                <label class="service-item" for="delivery">Доставка</label>
                 <label class="service-item" for="guarantee">Гарантия</label>
                 <label class="service-item" for="credit">Кредит</label>
               </div>
@@ -340,7 +357,7 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CBe~ZWt2cD" width="940" height="446" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CBe~ZWt2cD" width="940" height="446" allowfullscreen></iframe>
         <p><img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
       <button class="modal-close" type="button">Закрыть</button>
     </section>

@@ -636,7 +636,7 @@ span.phone::before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 940px;
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 
 .sales-delivery-container {
@@ -653,7 +653,7 @@ span.phone::before {
 .item {
   display: block;
 
-  width: 255px;
+  width: 256px;
   height: 79px;
   padding: 22px;
   margin-bottom: 20px;
@@ -709,18 +709,18 @@ span.phone::before {
   background-color: #ffbf47;
 }
 
-.flag {
+.new-item::before {
+  content: "";
+
   position: absolute;
   top: 0px;
   right: 0px;
   width: 60px;
   height: 60px;
-  text-indent: -1000px;
-  overflow: hidden;
-  z-index:20;
-}
 
-.flag-new {
+  overflow: hidden;
+  z-index: 20;
+
   background: url("../img/new-flag.png") no-repeat 0 0;
 }
 
@@ -942,6 +942,7 @@ span.phone::before {
 
 .heading .button {
   padding: 10px 55px;
+  padding-right: 56px;
 
   margin-right: 24px;
 }
@@ -977,28 +978,6 @@ span.phone::before {
   text-align: center;
 
   border: 1px solid #eaeaea;
-}
-
-.catalog-item::before {
-  content: "";
-  position: absolute;
-
-  width: 141px;
-  height: 38px;
-
-  bottom: 19px;
-  left: 42px;
-
-  z-index: 1;
-
-  background-image: url("../img/red-button.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.catalog-item .flag {
-  top: -1px;
-  right: -1px;
 }
 
 .catalog-item .actions {
@@ -1057,22 +1036,22 @@ span.phone::before {
 }
 
 .actions .button-item-bookmark {
-  color:#32425c;
-  background:white;
-  border-bottom-color:#63a63e;
+  color: #32425c;
+  background: white;
+  border-bottom-color: #63a63e;
 }
 
 .button-purchase:hover,
 .button-purchase:focus {
   background-color: #5fbb2d;
   border-color: #5fbb2d;
-  border-bottom-color:#63a63e;
+  border-bottom-color: #63a63e;
 }
 
 .button-purchase:active {
   background-color: #518534;
   border-color: #518534;
-  border-bottom-color:#518534;
+  border-bottom-color: #518534;
 }
 
 .button-purchase:hover::before,
@@ -1133,8 +1112,9 @@ h3.catalog-category {
 
 .item-old-price {
   min-height: 20px;
-  margin-top: 11px;
-  margin-bottom: 46px;
+  margin-left: 3px;
+  margin-top: 12px;
+  margin-bottom: 7px;
 
   font-size: 17px;
   line-height: 18px;
@@ -1143,14 +1123,28 @@ h3.catalog-category {
   text-decoration: line-through;
 }
 
-a.item-button {
+.new-price {
+  position: relative;
+  display: block;
+  width: 141px;
+  height: 38px;
+
+  margin-left: 43px;
+
+  background-image: url("../img/red-button.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.item-button {
   position: absolute;
-  padding: 7px 16px 9px 35px;
+  display: block;
+  padding: 10px 16px 9px 35px;
 
-  bottom: 21px;
-  left: 43px;
+  top: 0;
+  left: 0;
 
-  z-index: 1;
+  z-index: 10;
 
   font-size: 17px;
   line-height: 18px;
@@ -1160,6 +1154,7 @@ a.item-button {
   background-color: #ee3643;
   border-radius: 4px;
 }
+
 
 /*Каталог производителей*/
 
@@ -1223,10 +1218,6 @@ a.item-button {
   padding-top: 41px;
 }
 
-.services-container {
-  height: 481px;
-}
-
 .about-item {
   padding-bottom: 55px;
 }
@@ -1241,7 +1232,27 @@ a.item-button {
   font-weight: normal;
 }
 
+.services-container p {
+  display: inline-block;
+  width: 400px;
+  margin: 0;
+  margin-bottom: 69px;
+}
+
 /*Слайдер в разделе сервисы*/
+.services-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+      justify-content: space-between;
+
+  width: 940px;
+}
+
 .services-catalog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1253,9 +1264,10 @@ a.item-button {
 
   position: relative;
 
-  padding: 0;
   width: 240px;
-  margin-top: 69px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 101px;
 }
 
 .services-catalog::after {
@@ -1277,7 +1289,7 @@ a.item-button {
   display: block;
   position: relative;
   width: 194px;
-  padding: 15px 23px;
+  padding: 15px 23px 16px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
@@ -1295,15 +1307,6 @@ a.item-button {
   cursor: pointer;
 }
 
-.service-item-current {
-  color: #32425c;
-  background-color: #ffffff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-
-
 .service-item :focus {
   background-color: #293449;
   -webkit-box-shadow: none;
@@ -1319,19 +1322,24 @@ a.item-button {
 
 .services-slider-inner {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .service-slide {
   display: none;
 
   position: relative;
-  left: 280px;
-  bottom: 212px;
+  width: 620px;
+  left: 0;
+  top: 0;
   padding-bottom: 116px;
 }
 
 .service-slide h2 {
   padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
@@ -1340,7 +1348,8 @@ a.item-button {
 
 .service-slide p {
   display: block;
-  margin-top: -5px;
+  margin: 0;
+  padding: 0;
 }
 
 .service-slide:nth-child(1) {
@@ -1384,6 +1393,16 @@ a.item-button {
 #credit:checked ~ .services-slider-inner .service-slide:nth-child(3) {
   display: block;
 }
+
+#delivery:checked ~ .services-catalog .service-item:nth-child(1),
+#guarantee:checked ~ .services-catalog .service-item:nth-child(2),
+#credit:checked ~ .services-catalog .service-item:nth-child(3)  {
+  color: #32425c;
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 
 /*Раздел информации о компании Техномарт*/
 
@@ -2321,7 +2340,8 @@ ul.footer-social {
 
 .modal-card {
   left: 50%;
-  bottom: 15%;
+  top: 50%;
+  margin-top: -280px;
   margin-left: -270px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 20px 40px 0px rgba(41, 52, 43, 0.75),
