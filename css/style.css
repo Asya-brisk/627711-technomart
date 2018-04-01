@@ -1331,9 +1331,10 @@ h3.catalog-category {
 
   position: relative;
   width: 620px;
+  min-height: 285px;
   left: 0;
   top: 0;
-  padding-bottom: 116px;
+
 }
 
 .service-slide h2 {
