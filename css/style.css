@@ -338,13 +338,10 @@ input[type="radio"].visually-hidden {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-
-
   width: 940px;
   margin: 0 auto;
   margin-bottom: 24px;
   padding: 0 10px;
-
 
   font-family: "Cuprum", Arial, sans-serif;
 
@@ -962,7 +959,8 @@ span.phone::before {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+
   padding: 0;
   margin: 0;
   margin-left: -20px;
@@ -978,6 +976,11 @@ span.phone::before {
   text-align: center;
 
   border: 1px solid #eaeaea;
+}
+
+.catalog-item.new-item::before {
+  top: -1px;
+  right: -1px;
 }
 
 .catalog-item .actions {
@@ -1334,7 +1337,6 @@ h3.catalog-category {
   min-height: 285px;
   left: 0;
   top: 0;
-
 }
 
 .service-slide h2 {
@@ -1498,8 +1500,9 @@ ul.transport {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
   width: 940px;
   padding: 0 10px;
   margin: 0 auto;
@@ -2476,9 +2479,9 @@ ul.footer-social {
 }
 
 .modal .button {
-  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100%;
   margin-bottom: 37px;
 }
 
@@ -2539,10 +2542,11 @@ ul.footer-social {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 460px;
+
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 460px;
   margin: 0 auto;
 }
 
