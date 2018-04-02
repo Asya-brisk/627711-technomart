@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <meta name="format-detection" content="telephone=no">
   </head>
@@ -108,8 +108,8 @@
           <ul class="catalog-list catalog-main-page">
             <li class="catalog-item">
               <div class="actions">
-                  <a class="button-purchase" href="#">Купить</a>
-                  <a class="button-item-bookmark" href="#">В закладки</a>
+                  <a class="button-purchase" href="purchase.html">Купить</a>
+                  <a class="button-item-bookmark" href="bookmark.html">В закладки</a>
               </div>
               <div class="catalog-item-image">
                 <img src="img/item1.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 9000">
@@ -126,8 +126,8 @@
             </li>
             <li class="catalog-item">
               <div class="actions">
-                  <a class="button-purchase" href="#">Купить</a>
-                  <a class="button-item-bookmark" href="#">В закладки</a>
+                  <a class="button-purchase" href="purchase.html">Купить</a>
+                  <a class="button-item-bookmark" href="bookmark.html">В закладки</a>
               </div>
               <div class="catalog-item-image">
                 <img src="img/item2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
@@ -144,8 +144,8 @@
             </li>
             <li class="catalog-item">
               <div class="actions">
-                <a class="button-purchase" href="#">Купить</a>
-                <a class="button-item-bookmark" href="#">В закладки</a>
+                <a class="button-purchase" href="purchase.html">Купить</a>
+                <a class="button-item-bookmark" href="bookmark.html">В закладки</a>
               </div>
               <div class="catalog-item-image">
                 <img src="img/item3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
@@ -162,8 +162,8 @@
             </li>
             <li class="catalog-item new-item">
               <div class="actions">
-                <a class="button-purchase" href="#">Купить</a>
-                <a class="button-item-bookmark" href="#">В закладки</a>
+                <a class="button-purchase" href="purchase.html">Купить</a>
+                <a class="button-item-bookmark" href="bookmark.html">В закладки</a>
               </div>
               <div class="catalog-item-image">
                 <img src="img/item4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
@@ -271,7 +271,7 @@
         <section class="information">
           <h2>Компания &#171;Техномарт&#187;</h2>
           <p class="first-line">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          <p class="second-line">Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями: </p>
           <ul class="transport">
             <li>Деловые линии</li>
@@ -282,7 +282,7 @@
         </section>
         <section class="contacts">
           <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами,<br>
+          <p>Вы можете забрать товар сами,
           заехав в наш офис:</p>
           <a class="button-map" href="map.html" ><img src="img/small-map.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></a>
           <p><a class="button write-us" href="writeus.html">Заблудились? Напишите нам!</a></p>
@@ -354,16 +354,13 @@
           <button class="modal-close" type="button">Закрыть</button>
       </form>
     </section>
-
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
         <iframe src="https://yandex.ru/map-widget/v1/-/CBe~ZWt2cD" width="940" height="446" allowfullscreen></iframe>
         <p><img src="img/map-popup.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
-
     <script src="js/script.min.js"></script>
-
   </body>
 </html>
 

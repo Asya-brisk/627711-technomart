@@ -1,4 +1,5 @@
  body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
 
@@ -95,7 +96,7 @@ input[type="radio"].visually-hidden {
 
 .top-header-wrapper {
   width: 100%;
-  margin: 0px;
+  margin: 0;
 
   background-color: #293449;
 }
@@ -339,9 +340,9 @@ input[type="radio"].visually-hidden {
       flex-wrap: wrap;
 
   width: 940px;
+  padding: 0 10px;
   margin: 0 auto;
   margin-bottom: 24px;
-  padding: 0 10px;
 
   font-family: "Cuprum", Arial, sans-serif;
 
@@ -454,6 +455,7 @@ span.phone::before {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
+  vertical-align: middle;
 
   background-color: #ffffff;
 }
@@ -613,6 +615,7 @@ span.phone::before {
   opacity: 0.5;
 }
 
+/*Промо-блок*/
 .container {
   width: 940px;
   margin: 0 auto;
@@ -622,7 +625,6 @@ span.phone::before {
   background-color: #ffffff;
 }
 
-/*Промо-блок*/
 .items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -802,6 +804,7 @@ span.phone::before {
   width: 10px;
   height: 10px;
   margin-left: 10px;
+  vertical-align: middle;
 
   background-color: #ffffff;
   border-radius: 50%;
@@ -933,7 +936,7 @@ span.phone::before {
   font-weight: normal;
 }
 
-.brands .heading h2 {
+.brands h2 {
   margin-left: 26px;
 }
 
@@ -1236,7 +1239,7 @@ h3.catalog-category {
 }
 
 .services-container p {
-  display: inline-block;
+  display: block;
   width: 400px;
   margin: 0;
   margin-bottom: 69px;
@@ -1310,7 +1313,8 @@ h3.catalog-category {
   cursor: pointer;
 }
 
-.service-item :focus {
+.service-item:focus,
+.service-item:hover {
   background-color: #293449;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1426,14 +1430,22 @@ h3.catalog-category {
   width: 540px;
 }
 
-p.first-line {
+.information .first-line {
   margin-bottom: 26px;
+}
+
+.information .second-line {
+  width: 390px;
 }
 
 .contacts {
   display: block;
   width: 300px;
   padding: 0;
+}
+
+.contacts p:first-of-type {
+  width: 180px;
 }
 
 .contacts img {
@@ -1774,10 +1786,10 @@ ul.transport {
   opacity: 0.78;
 }
 
-.filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before,
-.filter-input-checkbox:checked + label:hover::after,
-.filter-input-checkbox:checked + label:focus::after {
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:checked:hover + label::after,
+.filter-input-checkbox:checked:focus + label::after {
   opacity: 1;
 }
 
@@ -1809,13 +1821,13 @@ ul.transport {
   border-radius: 50%;
 }
 
-.filter-input-radio + label:hover::before,
-.filter-input-radio + label:focus::before {
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before {
   border: 4px solid #b5b5b5;
 }
 
-.filter-input-radio:checked + label:hover::after,
-.filter-input-radio:checked + label:focus::after {
+.filter-input-radio:checked:hover + label::after,
+.filter-input-radio:checked:focus + label::after {
   background-color: #b5b5b5;
 }
 
@@ -2053,7 +2065,7 @@ a.up-down:active:not(.up-down-current) path {
 }
 
 p.footer-contacts {
-  display: inline-block;
+  display: block;
   width: 332px;
   margin-top: 15px;
   margin-left: 2px;
@@ -2553,6 +2565,7 @@ ul.footer-social {
 .modal-cart .button {
   display: inline-block;
   width: 220px;
+  vertical-align: middle;
 }
 
 .button-modal-cart {
